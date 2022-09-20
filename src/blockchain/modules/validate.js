@@ -13,4 +13,6 @@ export default(blockchain) => {
         if(previousHash !== previousBlock.hash) throw Error('Hash previo invalido o corrupto');
         if(hash !== Block.hash(timeStamp, previousHash, data)) throw Error('Hash invalido');
     }
+
+    return true;
 }
