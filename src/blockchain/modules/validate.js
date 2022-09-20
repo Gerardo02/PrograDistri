@@ -1,7 +1,7 @@
 import Block from "../block.js";
 
 export default(blockchain) => {
-    const [ genesisBlock, ...block ] = blockchain;
+    const [ genesisBlock, ...blocks ] = blockchain;
     if(JSON.stringify(genesisBlock) !== JSON.stringify(Block.genesis)) throw Error('Bloque genesis invalido');
 
     for(let i = 0; i < blocks.length; i++){
