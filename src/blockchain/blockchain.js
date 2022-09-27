@@ -13,6 +13,19 @@ class BlockChain {
 
         return block;
     }
+
+    replace(newBlocks = []) {
+        if (newBlocks.length < this.blocks.length) throw Error('La cadena recibida no es más larga que la cadena actual.');
+        try {
+          validate(newBlocks);
+        } catch (error) {
+          throw Error('Cadena recibida invalida');
+        }
+    
+        this.blocks = newBlocks;
+    
+        return this.blocks;
+      }
 }
 
 export default BlockChain;
