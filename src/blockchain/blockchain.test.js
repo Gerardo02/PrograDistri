@@ -28,7 +28,7 @@ describe('BlockChain', () => {
         expect(blockchain.blocks.length).toEqual(2);
     });
 
-    it('Prbuena de remplazo de cadana con otra cadena valida', () => {
+    it('Prueba de remplazo de cadana con otra cadena valida', () => {
         blockchainB.addBlock('bl4ck-1');
         blockchain.replace(blockchainB.blocks);
     
